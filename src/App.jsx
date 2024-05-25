@@ -1,16 +1,32 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
 
+
+import Container from 'react-bootstrap/Container';
+import Header from './components/navigation/Header'
+import AboutMe from './components/Main/AboutMe'
+import Footer from './components/navigation/Footer';
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <h1> Utsho is a Gay </h1>
+      <Container>
 
-        <button onClick={() => setCount(count + 1)}> Count + {count}</button>
-      </div>
+        {/* heading Starts */}
+        <header>
+          <Header />
+        </header>
+        {/* main Starts */}
+        <main>
+          <AboutMe />
+        </main>
+        {/* footer Starts */}
+        <footer>
+          < Footer />
+        </footer>
+      </Container>
+
     </>
   )
 }
